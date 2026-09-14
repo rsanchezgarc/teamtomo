@@ -74,7 +74,7 @@ def from_etomo_directory(
     #   > the shifts are applied after rotation and projection and shift the
     #   > projected scope-space point to the image position
     #
-    #  Roation matrix are orthogonal, so inversion = transposition :
+    #  Rotation matrix are orthogonal, so inversion = transposition :
     #  np.einsum('nij,nj->ni', np.linalg.inv(m), shifts)
     #    = np.einsum('nji,nj->ni', m, shifts)
     #

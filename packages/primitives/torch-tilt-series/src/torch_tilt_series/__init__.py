@@ -18,10 +18,10 @@ from torch_tilt_series.preprocessing import preprocess_tilt_series_images
 from torch_tilt_series.tilt_series import TiltSeries
 from torch_tilt_series.utils import normalize_on_central_crop, subtract_plane
 
-TiltSeries.from_aretomo_output = classmethod(
+TiltSeries.from_aretomo_output = classmethod(  # type: ignore[attr-defined]
     lambda cls, *args, **kwargs: from_aretomo_output(*args, **kwargs)
 )
-TiltSeries.from_etomo_directory = classmethod(
+TiltSeries.from_etomo_directory = classmethod(  # type: ignore[attr-defined]
     lambda cls, *args, **kwargs: from_etomo_directory(*args, **kwargs)
 )
 
